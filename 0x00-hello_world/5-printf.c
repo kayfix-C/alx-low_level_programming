@@ -1,4 +1,4 @@
-#include<conio.h>
+#include<stio.h>
 /**
  * Program entry
  *
