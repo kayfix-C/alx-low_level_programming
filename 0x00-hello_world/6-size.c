@@ -4,9 +4,9 @@
  *
  * Description: 'This program prints binary variables length'
  *
- * return: Always 0 for success
+ * Return: Always 0 for success
  */
-int main()
+int main(void)
 {
 	int intType;
 	float floatType;
