@@ -1,13 +1,13 @@
-#include<stdio.h>
+#include<conio.h>
 /**
  * main - Entry point
  *
- * Description: 'This program prints some phrases on the screen using printf function'
+ * Description: 'This program uses printf to stout'
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
-        return (0);
+	return (0);
 }
