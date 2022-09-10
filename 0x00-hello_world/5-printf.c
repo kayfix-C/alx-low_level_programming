@@ -1,15 +1,14 @@
-#include<stio.h>
-/**
- * Program entry
- *
- * Description: 'This program prints few phrase on the screen using printf function'
- *
- */
-int main(void)
+#include<stdio.h>                                            
+/**                                                          
+ * main - Entry point                                        
+ *                                                           
+ * Description: 'This program prints some phrases on the screen using printf function'                                           
+ *                                                           
+ * Return: Always 0 (Success)                                
+ */                                                          
+int main(void)                                               
 {
-
-        Printf(" with proper grammar, but the outcome is a piece of art,\n");
-
-        return (0);
-
+	printf("with proper grammar, but the outcome is a piece of art,\n");
+                                                             
+        return (0);                                          
 }
