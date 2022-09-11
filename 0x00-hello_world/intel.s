@@ -48,3 +48,4 @@ main:
 	.seh_endproc
 	.ident	"GCC: (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0"
 	.def	printf;	.scl	2;	.type	32;	.endef
+	kayFix
