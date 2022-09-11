@@ -11,7 +11,7 @@
  */
 unsigned int i = 0;
 
-int main()
+int main(void)
 {
     printf("%d\n", i);
     asm(".intel_syntax noprefix\n");
