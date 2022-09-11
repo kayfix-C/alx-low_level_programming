@@ -25,22 +25,24 @@ main:
 	.cfi_def_cfa_register 6
 	mov	eax, DWORD PTR i[rip]
 	mov	esi, eax
-	lea	rdi, .LC0[rip]
+	lea	rax, .LC0[rip]
+	mov	rdi, rax
 	mov	eax, 0
 	call	printf@PLT
 #APP
-# 17 "intel.c" 1
+# 18 "intel.c" 1
 	.intel_syntax noprefix
 
 # 0 "" 2
-# 18 "intel.c" 1
+# 19 "intel.c" 1
 	mov dword ptr [i], 1
 
 # 0 "" 2
 #NO_APP
 	mov	eax, DWORD PTR i[rip]
 	mov	esi, eax
-	lea	rdi, .LC0[rip]
+	lea	rax, .LC0[rip]
+	mov	rdi, rax
 	mov	eax, 0
 	call	printf@PLT
 	mov	eax, 0
@@ -50,21 +52,21 @@ main:
 	.cfi_endproc
 .LFE0:
 	.size	main, .-main
-	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
+	.ident	"GCC: (Ubuntu 11.2.0-19ubuntu1) 11.2.0"
 	.section	.note.GNU-stack,"",@progbits
 	.section	.note.gnu.property,"a"
 	.align 8
-	.long	 1f - 0f
-	.long	 4f - 1f
-	.long	 5
+	.long	1f - 0f
+	.long	4f - 1f
+	.long	5
 0:
-	.string	 "GNU"
+	.string	"GNU"
 1:
 	.align 8
-	.long	 0xc0000002
-	.long	 3f - 2f
+	.long	0xc0000002
+	.long	3f - 2f
 2:
-	.long	 0x3
+	.long	0x3
 3:
 	.align 8
 4:

@@ -13,10 +13,12 @@ unsigned int i = 0;
 
 int main(void)
 {
-    printf("%d\n", i);
-    asm(".intel_syntax noprefix\n");
-    asm("mov dword ptr [i], 1\n");
-    printf("%d\n", i);
+	printf("%d\n", i);
 
-    return (0);
+	asm(".intel_syntax noprefix\n");
+	asm("mov dword ptr [i], 1\n");
+	
+	printf("%d\n", i);
+	
+	return (0);
 }
