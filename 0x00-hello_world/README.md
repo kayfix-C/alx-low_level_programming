@@ -1,1 +1,2 @@
-Learning Preprocessor in C
+Learning C programming Language
+Sooo! exhausting mehn!
