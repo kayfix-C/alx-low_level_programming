@@ -18,5 +18,5 @@ int main(void)
     asm("mov dword ptr [i], 1\n");
     printf("%d\n", i);
 
-    return 0;
+    return (0);
 }
