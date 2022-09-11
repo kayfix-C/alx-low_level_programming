@@ -4,48 +4,67 @@
 	.globl	i
 	.bss
 	.align 4
+	.type	i, @object
+	.size	i, 4
 i:
-	.space 4
-	.def	__main;	.scl	2;	.type	32;	.endef
-	.section .rdata,"dr"
+	.zero	4
+	.section	.rodata
 .LC0:
-	.ascii "%d\12\0"
+	.string	"%d\n"
 	.text
 	.globl	main
-	.def	main;	.scl	2;	.type	32;	.endef
-	.seh_proc	main
+	.type	main, @function
 main:
+.LFB0:
+	.cfi_startproc
+	endbr64
 	push	rbp
-	.seh_pushreg	rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
 	mov	rbp, rsp
-	.seh_setframe	rbp, 0
-	sub	rsp, 32
-	.seh_stackalloc	32
-	.seh_endprologue
-	call	__main
+	.cfi_def_cfa_register 6
 	mov	eax, DWORD PTR i[rip]
-	mov	edx, eax
-	lea	rcx, .LC0[rip]
-	call	printf
-/APP
- # 17 "intel.c" 1
+	mov	esi, eax
+	lea	rdi, .LC0[rip]
+	mov	eax, 0
+	call	printf@PLT
+#APP
+# 17 "intel.c" 1
 	.intel_syntax noprefix
 
- # 0 "" 2
- # 18 "intel.c" 1
+# 0 "" 2
+# 18 "intel.c" 1
 	mov dword ptr [i], 1
 
- # 0 "" 2
-/NO_APP
+# 0 "" 2
+#NO_APP
 	mov	eax, DWORD PTR i[rip]
-	mov	edx, eax
-	lea	rcx, .LC0[rip]
-	call	printf
+	mov	esi, eax
+	lea	rdi, .LC0[rip]
 	mov	eax, 0
-	add	rsp, 32
+	call	printf@PLT
+	mov	eax, 0
 	pop	rbp
+	.cfi_def_cfa 7, 8
 	ret
-	.seh_endproc
-	.ident	"GCC: (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0"
-	.def	printf;	.scl	2;	.type	32;	.endef
-	kayFix
+	.cfi_endproc
+.LFE0:
+	.size	main, .-main
+	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
+	.section	.note.GNU-stack,"",@progbits
+	.section	.note.gnu.property,"a"
+	.align 8
+	.long	 1f - 0f
+	.long	 4f - 1f
+	.long	 5
+0:
+	.string	 "GNU"
+1:
+	.align 8
+	.long	 0xc0000002
+	.long	 3f - 2f
+2:
+	.long	 0x3
+3:
+	.align 8
+4:
