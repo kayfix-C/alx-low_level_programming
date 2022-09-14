@@ -3,7 +3,9 @@
 /**
  * _islower - Checks for lowercase xters
  *
- * Return: Always 0 (Success).
+ * @k: An input parameter a-z (Success)
+ *
+ * Return: Always 0 for lowercase and 1 for upper
  */
 int _islower(int k)
 
