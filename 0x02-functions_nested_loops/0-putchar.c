@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include "main.h"
 /**
- * main - Entry Point
+ * main - Where execution starts
  *
  * Description: 'Printing putchar to the stdo'
  *
@@ -10,8 +10,16 @@
 
 int main(void)
 {
-	printf("_putchar\n");
+	char [] = "_putchar";
+	int k = 0;
 
+	for (k < 8)
+	{
+		_putchar([k]);
+		k += 1;
+	}
+
+	_putchar('\n');
 	return (0);
 
 }
