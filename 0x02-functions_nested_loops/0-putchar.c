@@ -1,25 +1,22 @@
-#include<stdio.h>
+#include <unistd.h>
 #include "main.h"
+
 /**
- * main - Where execution starts
+ * main - Starting point
  *
- * Description: 'Printing putchar to the stdo'
+ * Description: 'It prints the word: _putchar, followed by a new line'
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	char [] = "_putchar";
-	int k = 0;
+	char test[8] = "_putchar";
+	int k;
 
-	for (k < 8)
-	{
-		_putchar([k]);
-		k += 1;
-	}
+	for (k = 0; k < 8; k += 1)
+		_putchar(test[k]);
 
 	_putchar('\n');
-	return (0);
 
+	return (0);
 }
